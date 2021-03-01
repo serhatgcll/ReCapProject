@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace DataAccess.Concrete.InMemory
 {
@@ -36,9 +37,19 @@ namespace DataAccess.Concrete.InMemory
 
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            return null;
+        }
+
         public List<Car> GetAll()
         {
             return _cars;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            return null;
         }
 
         public List<Car> GetAllById(int Id)
