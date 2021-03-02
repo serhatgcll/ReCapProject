@@ -1,7 +1,7 @@
-﻿using Entities.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entities;
 
 namespace Entities.Concrete
 {
@@ -14,6 +14,7 @@ namespace Entities.Concrete
 
         public decimal DailyPrice { get; set; }
         public string Description { get; set; }
+        public string CarName { get; set; }
 
     }
 }
