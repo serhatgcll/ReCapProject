@@ -12,13 +12,22 @@ namespace ConsoleUI
         {
             //RentalAdd();
             //CustomerAdded();
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            var result=rentalManager.GetAll();
-            foreach (var rental in result.Data)
+            CarManager carManager = new CarManager(new EfCarDal());
+            var result = carManager.GetAll();
+            if (result.Success)
             {
-                Console.WriteLine(rental.CustomerId+"/"+rental.CarId+"/"+rental.RentDate+"/"+rental.ReturnDate);
-
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.CarName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+           
+
+
           
 
             // BrandUpdatedTest();
