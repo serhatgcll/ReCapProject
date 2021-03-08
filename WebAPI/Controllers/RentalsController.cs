@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
 
 
             }
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
 
         [HttpPost("add")]
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result);
+            return BadRequest(result.Message);
 
         }
         [HttpPost("delete")]
@@ -64,7 +64,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             }
 
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
         [HttpPost("update")]
         public IActionResult Update(Rental rental)
