@@ -13,7 +13,7 @@ namespace Core.CrossCuttingCorcerns.Validation
             var result = validator.Validate(context);
             if (!result.IsValid)
             {
-                throw new ValidationException(result.Errors);
+                throw new ValidationException(result.Errors);    
             }
         }
     }
